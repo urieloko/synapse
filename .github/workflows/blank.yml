@@ -34,7 +34,11 @@ jobs:
           git status
           git fetch
           git pull
+          echo "****************************"
           echo ${{ github.ref_name	}}
+          echo ${{ github.run_number }}
+          echo  "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
+          echo "****************************"
           Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           cd "D:\temp\remoterepo"
           git add .
