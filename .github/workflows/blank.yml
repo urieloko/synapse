@@ -35,4 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           pwd
+          gci "D:\temp\remoterepo"
+      # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
           
