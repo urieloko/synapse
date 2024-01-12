@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: cloneremoterepo
 
 # Controls when the workflow will run
 on:
@@ -18,19 +18,29 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          pwd
+          
+          git status
+          git fetch
+          git pull
+          Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
+          cd "D:\temp\remoterepo"
+          git add .
+          git status
+          git commit -am  "test commit"
+          git remote -v 
+          git push 
+          
+      # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
+          
