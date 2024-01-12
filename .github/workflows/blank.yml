@@ -35,6 +35,7 @@ jobs:
           git fetch
           git pull
           Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
+          git add .
           git status
           
       # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
