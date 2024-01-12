@@ -38,7 +38,9 @@ jobs:
           cd "D:\temp\remoterepo"
           git add .
           git status
-          
+          git commit -am  "test commit"
+          git remote -v 
+          git push 
           
       # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
           
