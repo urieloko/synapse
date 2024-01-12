@@ -30,18 +30,24 @@ jobs:
       - name: Run a multi-line script
         run: |
           pwd
-          
-          git status
-          git fetch
-          git pull
           echo "****************************"
+          env:
+            ws: github.workspace
+            rama: github.ref_name
+          cd "D:\temp\remoterepo"
+          git fetch
+          git checkout -b $env.rama
+          git pull
           echo ${{ github.ref_name	}}
           echo ${{ github.run_number }}
           echo  "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
           echo "****************************"
+          cd $env.ws
           Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           cd "D:\temp\remoterepo"
+          
           git add .
+          git pull
           git status
           git commit -am  "test commit"
           git remote -v 
