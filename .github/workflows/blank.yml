@@ -40,7 +40,7 @@ jobs:
           echo ${{ github.run_number }}
           echo  "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
           echo "****************************"
-          cd $env.ws
+          cd ${{ github.workspace }}
           Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           cd "D:\temp\remoterepo"
           
