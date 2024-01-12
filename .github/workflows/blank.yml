@@ -30,13 +30,15 @@ jobs:
       - name: Run a multi-line script
         run: |
           pwd
-          #cd "D:\temp\remoterepo"
+          
           git status
           git fetch
           git pull
           Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
+          cd "D:\temp\remoterepo"
           git add .
           git status
+          
           
       # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
           
