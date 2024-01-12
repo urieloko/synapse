@@ -31,9 +31,7 @@ jobs:
         run: |
           pwd
           echo "****************************"
-          env:
-            ws: ${{ github.workspace }}
-            rama: ${{ github.ref_name }}
+          $rama = 
           cd "D:\temp\remoterepo"
           git fetch
           git checkout -b $env.rama
