@@ -34,7 +34,7 @@ jobs:
           git status
           git fetch
           git pull
-          Get-ChildItem -Path  -Recurse -Exclude ".github" | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
+          Get-ChildItem -Path . -Recurse -Exclude ".github" | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           git status
           
       # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
