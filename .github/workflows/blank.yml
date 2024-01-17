@@ -46,18 +46,20 @@ jobs:
           echo ${{ github.ref_name	}}
           echo ${{ github.run_number }}
           echo "workspace"- ${{ github.workspace }}
-          echo "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
+          echo "**************************** remote repo  updated ****************************"
+          
           echo "****************************"
           cd ${{ github.workspace }}
           pwd
           #Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
-          #Get-ChildItem -Path .\ | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
+          Get-ChildItem -Path .\ | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           cd "D:\temp\remoterepo"
           pwd
           git add .
           git pull
           git status
-          git commit -am  "test commit"
+          git commit -am  "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
+          echo "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
           git remote -v 
           git push 
           
