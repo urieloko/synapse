@@ -32,18 +32,16 @@ jobs:
         with:
           # PowerShell script to execute in Actions-hydrated context
           script: |
-            echo "nada"
-         
+            write-host "nada"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           pwd
           echo "****************************"
-          $rama = 
-          #cd "D:\temp\remoterepo"
+          cd "D:\temp\remoterepo"
           git fetch
-          git checkout -b $env.rama
+          #git checkout -b $env.rama
           git pull
           echo ${{ github.ref_name	}}
           echo ${{ github.run_number }}
@@ -51,10 +49,11 @@ jobs:
           echo "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
           echo "****************************"
           cd ${{ github.workspace }}
+          pwd
           #Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           #Get-ChildItem -Path .\ | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           cd "D:\temp\remoterepo"
-          
+          pwd
           git add .
           git pull
           git status
