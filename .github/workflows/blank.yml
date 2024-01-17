@@ -25,30 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - name: PowerShell script
-        # You may pin to the exact commit or the version.
-        # uses: Amadevus/pwsh-script@97a8b211a5922816aa8a69ced41fa32f23477186
-        uses: Amadevus/pwsh-script@v2.0.3
-        with:
-          # PowerShell script to execute in Actions-hydrated context
-          script: |
-            write-host "nada"
-
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          pwd
-          echo "****************************"
+          echo "**************************** remote repo  updated ****************************"
           cd "D:\temp\remoterepo"
           git fetch
-          #git checkout -b $env.rama
           git pull
-          echo ${{ github.ref_name	}}
-          echo ${{ github.run_number }}
-          echo "workspace"- ${{ github.workspace }}
+          # echo "workspace"- ${{ github.workspace }}
           echo "**************************** remote repo  updated ****************************"
-          
-          echo "****************************"
+          echo rama - ${{ github.ref_name	}}
+          echo buildid - ${{ github.run_number }}
           cd ${{ github.workspace }}
           pwd
           #Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
@@ -62,6 +49,7 @@ jobs:
           echo "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
           git remote -v 
           git push 
+          echo "**************************** remote repo  updated from github ****************************"
           
       # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
           
