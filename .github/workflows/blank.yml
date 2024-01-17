@@ -24,23 +24,32 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-
+      
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          pwd
-          
-          git status
+          echo "**************************** remote repo  updated ****************************"
+          cd "D:\temp\remoterepo"
           git fetch
           git pull
-          Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
+          # echo "workspace"- ${{ github.workspace }}
+          echo "**************************** remote repo  updated ****************************"
+          echo rama - ${{ github.ref_name	}}
+          echo buildid - ${{ github.run_number }}
+          cd ${{ github.workspace }}
+          pwd
+          #Get-ChildItem -Path .\ -Exclude .github | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
+          Get-ChildItem -Path .\ | Copy-Item -Destination "D:\temp\remoterepo" -Recurse -Force
           cd "D:\temp\remoterepo"
+          pwd
           git add .
+          git pull
           git status
-          git commit -am  "test commit"
+          git commit -am  "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
+          echo "push on branch ${{ github.ref_name	}} with id ${{ github.run_number }}"
           git remote -v 
           git push 
+          echo "**************************** remote repo  updated from github ****************************"
           
       # cd "C:\GitHub\actions-runner\_work\synapse\synapse"
           
