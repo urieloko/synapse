@@ -41,5 +41,9 @@ jobs:
           run: echo Hello, world!
 
         - name: Run a one-line script1
-          run: echo Hello, world!          
+          uses: benhamiltonpro/manual-trigger@v1.0.2
+          with:
+            # Run name that you can use for your workflow if triggers
+            RUN_NAME: # optional, default is run-workflow
+            run: echo Hello, world!          
       
