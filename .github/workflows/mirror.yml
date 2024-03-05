@@ -35,13 +35,13 @@ jobs:
           # The remote repository e.g. https://github.com/octocat/foo.git or git@github.com:octocat/foo.git
           REMOTE: https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
           # Username for remote repository
-          GIT_USERNAME: ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa
+          GIT_USERNAME: urieloko
           # The git HTTPS password or token for the remote repository
           GIT_PASSWORD: ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa
           # The ssh private key for writing to the remote repository, if using ssh
           GIT_SSH_PRIVATE_KEY: # optional
           # The ssh public key for writing to the remote repository. Normally, not required at all
-          GIT_SSH_PUBLIC_KEY: # optional
+          GIT_SSH_PUBLIC_KEY: # optional 
           # The contents of an SSH known_hosts file for host key verification
           GIT_SSH_KNOWN_HOSTS: # optional
           # If true, skip host key verification. Mutually exclusive with GIT_SSH_KNOWN_HOSTS
@@ -54,5 +54,7 @@ jobs:
           GIT_PUSH_ARGS: # optional, default is --tags --force --prune
           # set to "true" to enable debug mode
           DEBUG: # optional, default is false
+    
+      - name: 
     
     
