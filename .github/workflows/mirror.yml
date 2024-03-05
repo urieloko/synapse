@@ -31,7 +31,7 @@ jobs:
         uses: yesolutions/mirror-action@v0.7.0
         with:
         # The remote ref name to use. 'mirror' by default. Useful to avoid conflicts with existing remotes.
-        REMOTE_NAME: # optional
+        REMOTE_NAME: https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
         # The remote repository e.g. https://github.com/octocat/foo.git or git@github.com:octocat/foo.git
         REMOTE: # optional
         # Username for remote repository
