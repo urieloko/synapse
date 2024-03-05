@@ -37,6 +37,6 @@ jobs:
           git clone --mirror https://github.com/urieloko/synapse.git mirror1
           cd mirror1
           pwd
-          echo "ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa"| git push --mirror https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring >/dev/null
+          echo "ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa"| git push --mirror https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring 2>$0
           echo $?
           
