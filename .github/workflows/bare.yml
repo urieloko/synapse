@@ -13,11 +13,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  Mirroring:
     # The type of runner that the job will run on
     runs-on: self-hosted
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -31,5 +29,4 @@ jobs:
           pwd
           echo "ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa"| git push --mirror https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
           #git push --mirror  https://<ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa>@tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
-          echo $GITHUB_WORKSPACE
 
