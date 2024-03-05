@@ -32,7 +32,7 @@ jobs:
         run: |
           git clone --bare https://github.com/urieloko/synapse.git baresample
           cd baresample
-          git push --mirror https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
+          echo "ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa"| git push --mirror https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
           cd ..
           rm -rf baresample
 
