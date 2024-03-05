@@ -33,11 +33,11 @@ jobs:
           # The remote ref name to use. 'mirror' by default. Useful to avoid conflicts with existing remotes.
           REMOTE_NAME: 'mirroring'
           # The remote repository e.g. https://github.com/octocat/foo.git or git@github.com:octocat/foo.git
-          REMOTE: https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
+          REMOTE: "https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring"
           # Username for remote repository
           GIT_USERNAME: demo
           # The git HTTPS password or token for the remote repository
-          GIT_PASSWORD: ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa
+          GIT_PASSWORD: "ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa"
           # The ssh private key for writing to the remote repository, if using ssh
           GIT_SSH_PRIVATE_KEY: # optional
           # The ssh public key for writing to the remote repository. Normally, not required at all
