@@ -37,7 +37,7 @@ jobs:
           # Username for remote repository
           GIT_USERNAME: ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa
           # The git HTTPS password or token for the remote repository
-          GIT_PASSWORD: # optional
+          GIT_PASSWORD: ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa
           # The ssh private key for writing to the remote repository, if using ssh
           GIT_SSH_PRIVATE_KEY: # optional
           # The ssh public key for writing to the remote repository. Normally, not required at all
