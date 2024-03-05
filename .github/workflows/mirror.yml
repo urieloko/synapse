@@ -35,7 +35,7 @@ jobs:
           # The remote repository e.g. https://github.com/octocat/foo.git or git@github.com:octocat/foo.git
           REMOTE: https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
           # Username for remote repository
-          GIT_USERNAME: # optional
+          GIT_USERNAME: ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa
           # The git HTTPS password or token for the remote repository
           GIT_PASSWORD: # optional
           # The ssh private key for writing to the remote repository, if using ssh
