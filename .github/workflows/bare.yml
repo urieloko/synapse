@@ -32,6 +32,7 @@ jobs:
         run: |
           git clone --bare https://github.com/urieloko/synapse.git baresample
           cd baresample
+          pwd
           #echo "ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa"| git push --mirror https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
           git push --mirror  https://<ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa>@tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
           cd ..
