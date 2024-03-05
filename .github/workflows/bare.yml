@@ -23,10 +23,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       # Runs a set of commands using the runners shell
       - name: git repo with bare
         run: |
@@ -35,4 +31,5 @@ jobs:
           pwd
           echo "ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa"| git push --mirror https://tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
           #git push --mirror  https://<ynzp6euciylklhr4ljkj7xuozh46zo6z4lxn2urhdfk5x6snucwa>@tfsDemoUrielHdez@dev.azure.com/tfsDemoUrielHdez/SynapseDeploy/_git/mirroring
+          echo $GITHUB_WORKSPACE
 
